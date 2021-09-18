@@ -19,10 +19,15 @@ export const handleMint = async (account, royalties, media, validMedia) => {
         media,
         issued_at: Date.now().toString()
     };
+    alert(JSON.stringify({
+        token_id: 'token-' + Date.now(),
+        metadata: metadata,
+        perpetual_royalties
+    }));
     const deposit = parseNearAmount('0.1');
     await account.functionCall(contractId, 'nft_mint', {
         token_id: 'token-' + Date.now(),
-        metadata,
+        metadata: { TokenMetadata: metadata },
         perpetual_royalties
     }, GAS, deposit);
 };

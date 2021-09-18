@@ -1,4 +1,5 @@
-const contractName = 'dev-1631674746071-10762231497625';
+//NFT contract name
+const contractName = 'dev-1632002835590-56113517939284';
 
 module.exports = function getConfig() {
 	let config = {
