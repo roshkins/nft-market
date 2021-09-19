@@ -1,0 +1,8 @@
+near call --accountId morenear.testnet dev-1632002835590-56113517939284 new '{
+    "owner_id": "morenear.testnet",
+    "metadata": "{\"title\": \"V1.0.0\",\"description\": \"REG ROYALTIES\"}",
+    "supply_cap_by_type": {
+        "string": "1"
+    },
+    "locked": false
+}' 

@@ -1,0 +1,22 @@
+near call --accountId dev-1632002835590-56113517939284 dev-1632002835590-56113517939284 nft_mint '{
+    "token_id": "32",
+    "metadata": "{\"title\": \"V1.0.0\",\"description\": \"REG ROYALTIES\"}",
+    "receiver_id": "dev-1632002835590-56113517939284"
+}' --amount=1
+
+near call market.dev-1632002835590-56113517939284 new '{
+    "owner_id": "dev-1632002835590-56113517939284",
+    "ft_token_ids": []
+}' --accountId=dev-1632002835590-56113517939284
+
+near call dev-1632002835590-56113517939284 new '{
+    "owner_id": "dev-1632002835590-56113517939284",
+    "metadata": {
+        "spec": "name",
+        "name": "NFT",
+        "symbol": "NFT"
+    },
+    "supply_cap_by_type": {
+        "test": "1000000"
+    }
+}' --accountId=dev-1632002835590-56113517939284

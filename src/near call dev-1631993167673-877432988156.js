@@ -1,0 +1,1 @@
+near call dev - 1631993167673 - 87743298815628 new '{"owner_id":"dev-1631993167673-87743298815628","metadata":{"spec":"name","name":"NFT","symbol":"NFT"},"supply_cap_by_type":{"test": "1000000"}}' --accountId = dev - 1631993167673 - 87743298815628
