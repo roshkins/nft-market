@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 
+import getConfig from './config';
+
 import { appStore, onAppMount } from './state/app';
 
 import { Wallet } from './components/Wallet';
@@ -29,6 +31,8 @@ const App = () => {
 	if (profile && !signedIn) {
 		setProfile(false);
 	}
+
+	const { contractName } = getConfig();
 
 	return <>
 		{ loading && <div className="loading">
@@ -63,7 +67,7 @@ const App = () => {
 				</div>
 			}
 		</div>
-
+		<h1 style={{ userSelect: "text" }} >Contract name: {contractName}</h1>
 
 		{
 			signedIn && <div id="tabs">
