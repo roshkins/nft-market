@@ -107,6 +107,7 @@ export const Gallery = ({ app, views, update, contractAccount, account, loading,
 				<div key={token_id} className="item">
 					<img src={media} onClick={() => history.pushState({}, '', window.location.pathname + '?t=' + token_id)} />
 					<p>{accountId !== owner_id ? `Owned by ${formatAccountId(owner_id)}` : `You own this!`}</p>
+					<h1>Your token Id: {token_id}</h1>
 					{ Object.keys(sale_conditions).length > 0 && <>
 						<h4>Royalties</h4>
 						{
